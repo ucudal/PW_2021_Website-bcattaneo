@@ -1,0 +1,19 @@
+{
+  "name": "pw_2021_website-bcattaneo",
+  "version": "1.0.0",
+  "description": "Project for the Web Programming course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ucudal/PW_2021_Website-bcattaneo.git"
+  },
+  "author": "Bruno Cattáneo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ucudal/PW_2021_Website-bcattaneo/issues"
+  },
+  "homepage": "https://github.com/ucudal/PW_2021_Website-bcattaneo#readme"
+}
