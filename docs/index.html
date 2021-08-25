@@ -4,42 +4,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bruno's CV</title>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Bruno Cattáneo</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css">
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
 </head>
 
-<body class="bg-gray-200">
-    <div>
-        <header class="bg-white shadow ">
-            <div class="max-w-7xl mx-auto py-6 px-4 px-6 px-8 ">
-                <h1 class="text-3xl font-bold text-gray-900 ">
-                    <img class="inline object-cover w-16 h-16 mr-2 rounded-full" src="https://avatars.githubusercontent.com/u/2736402?v=4" alt="Profile image" />
-                    <div class="inline">Bruno Cattáneo</div>
-                </h1>
-            </div>
-        </header>
-        <main>
-            <div class="max-w-7xl mx-auto py-6 px-6 px-8 ">
-                <div class="flex flex-wrap -mx-4 overflow-hidden ">
-
-                    <div class="m-2 bg-white p-8 rounded-md shadow-md my-4 px-4 w-full overflow-hidden">
-                        <img class="inline object-cover w-12 h-12 mr-2 rounded-full" src="https://media-exp1.licdn.com/dms/image/C4E0BAQGSuDVTo6jhHQ/company-logo_200_200/0/1519856020361?e=2159024400&v=beta&t=h4hO4YFjsH0fzK69yHf5_If3BRMCkWbYDnj39GPMebE" alt="Profile image" />
-                        <div class="inline">Sabre Corporation</div>
+<body>
+    <div class="text-center py-6 px-4 px-6 px-8 shadow mb-8">
+        <!-- TODO: is there a better way to achieve this? -->
+        <div class="flex items-center justify-center ">
+            <img class="w-32 h-32 mr-2 rounded-full" src="img/logo.png" alt="Profile image" />
+        </div>
+        <h1 class="m-2 text-3xl font-bold text-gray-900">Bruno Cattáneo</h1>
+        <h3 class="capitalize">Software developer</h3>
+    </div>
+    <div class="w-4/5 container mx-auto px-4 mb-8">
+        <div class="flex space-x-4 ">
+            <div class="flex-1 border-r-2">
+                <div>
+                    <h4 class="uppercase font-bold text-1xl">👋 Introduction</h4>
+                    <div class="text-gray-600 w-full mt-2 overflow-hidden">
+                        <p>Hi, I am <span class="font-bold">Bruno Cattáneo</span> from Uruguay 🇺🇾.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet auctor nisl. Nullam ac libero sed justo feugiat rutrum. Sed hendrerit magna augue, in consectetur neque tempor non.</p>
+                        <p>Feel free to call me at <span class="font-bold">+598 99 999 999</span> or just drop me an <a class="font-bold code" href="mailto:c@ttaneo.uy">email</a>.</p>
                     </div>
-
-                    <div class="m-2 bg-white p-8 rounded-md shadow-md my-4 px-4 w-full overflow-hidden ">
-                        <img class="inline object-cover w-12 h-12 mr-2 rounded-full" src="https://media-exp1.licdn.com/dms/image/C510BAQELqXUJwyU77Q/company-logo_200_200/0/1565297644216?e=2159024400&v=beta&t=TZSMza0AlLYNQZ7QRoZZVPw_QH3xCBbEQk22KlWJrXY" alt="Profile image" />
-                        <div class="inline">Oracle + Netsuite</div>
+                </div>
+                <div class="mt-8">
+                    <h4 class="uppercase font-bold text-1xl">🏫 Education</h4>
+                    <div class="text-gray-600 w-full mt-2 overflow-hidden">
+                        <p class="text-black font-bold">Computer Engineering</p>
+                        <p>Catholic University of Uruguay</p>
+                        <p class="italic">2017-Present</p>
                     </div>
-
-                    <div class="m-2 bg-white p-8 rounded-md shadow-md my-4 px-4 w-full overflow-hidden ">
-                        <img class="inline object-cover w-12 h-12 mr-2 rounded-full" src="https://cdn.connectamericas.com/sites/default/files/styles/company_public_profile_picture/public/company/pictures/BANTOTAL_UY_1410198867.jpg?itok=rGLffU9U" alt="Profile image" />
-                        <div class="inline">Bantotal</div>
+                </div>
+                <div class="mt-8">
+                    <h4 class="uppercase font-bold text-1xl">📧 Certifications</h4>
+                    <div class="text-gray-600 w-full mt-2 overflow-hidden">
+                        <p class="text-black font-bold">GeneXus Analyst 9.0</p>
+                        <p>Artech</p>
+                        <p class="italic">2014-Present</p>
+                    </div>
+                    <div class="mt-4 text-gray-600 w-full mt-2 overflow-hidden">
+                        <p class="text-black font-bold">First Certificate in English</p>
+                        <p>Cambridge English</p>
+                        <p class="italic">2019-Present</p>
+                    </div>
+                    <div class="mt-4 text-gray-600 w-full mt-2 overflow-hidden">
+                        <p class="text-black font-bold">Java SE 8 Programmer (Associate)</p>
+                        <p>Oracle University</p>
+                        <p class="italic">2021-Present</p>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <h4 class="uppercase font-bold text-1xl">🌍 Languages</h4>
+                    <div class="text-gray-600 w-full mt-2 overflow-hidden">
+                        <p class="text-black font-bold">Spanish 🇪🇸</p>
+                        <p>Native</p>
+                    </div>
+                    <div class="mt-4 text-gray-600 w-full mt-2 overflow-hidden">
+                        <p class="text-black font-bold">English 🇬🇧</p>
+                        <p>Intermediate level</p>
                     </div>
                 </div>
             </div>
-        </main>
-    </div>
+            <div class="flex-1 ">
+                <div>
+                    <h4 class="uppercase font-bold text-1xl">👷 Experience</h4>
+                    <div class="text-gray-600 w-full mt-2 overflow-hidden">
+                        <p class="text-black font-bold">Teaching Assistant, Programming I</p>
+                        <p>Catholic University of Uruguay</p>
+                        <p class="italic">2020-Present</p>
+                        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet auctor nisl. Nullam ac libero sed justo feugiat rutrum.</p>
+                    </div>
+                    <div class="mt-4 text-gray-600 w-full mt-2 overflow-hidden">
+                        <p class="text-black font-bold">Senior Software Engineer</p>
+                        <p>Sabre Corporation</p>
+                        <p class="italic">2021-Present</p>
+                        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet auctor nisl. Nullam ac libero sed justo feugiat rutrum.</p>
+                    </div>
+                    <div class="mt-4 text-gray-600 w-full mt-2 overflow-hidden">
+                        <p class="text-black font-bold">Senior Software Engineer</p>
+                        <p>Oracle Corporation</p>
+                        <p class="italic">2020-2021</p>
+                        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet auctor nisl. Nullam ac libero sed justo feugiat rutrum.</p>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <h4 class="uppercase font-bold text-1xl">🫂 References</h4>
+                    <div class="text-gray-600 w-full mt-2 overflow-hidden">
+                        <p class="text-black font-bold">Alejandro Fontes <span class="italic font-normal">Software Engineering Manager</span></p>
+                        <p>+598 99 999 999</p>
+                        <p>Oracle Corporation</p>
+                    </div>
+                    <div class="mt-4 text-gray-600 w-full mt-2 overflow-hidden">
+                        <p class="text-black font-bold">Dr. Gustavo Vazquez <span class="italic font-normal">Director of the Department of Informatics and Computer Science</span></p>
+                        <p>+598 99 999 999</p>
+                        <p>Catholic University of Uruguay</p>
+                    </div>
+                    <div class="mt-4 text-gray-600 w-full mt-2 overflow-hidden">
+                        <p class="text-black font-bold">Federico Romero <span class="italic font-normal">Software Engineering Manager</span></p>
+                        <p>+598 99 999 999</p>
+                        <p>Sabre Corporation</p>
+                    </div>
+                    <div class="mt-4 text-gray-600 w-full mt-2 overflow-hidden">
+                        <p class="text-black font-bold">Ing. Jorge Besil <span class="italic font-normal">Systems Engineering Manager</span></p>
+                        <p>+598 99 999 999</p>
+                        <p>Bantotal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/ucudal/PW_2021_Website-bcattaneo"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1" width="149"
+                height="149"></a>
 </body>
 
 </html>
