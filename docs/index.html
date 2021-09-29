@@ -65,6 +65,7 @@
                         <p class="text-black font-bold">English 🇬🇧</p>
                         <p>Intermediate level</p>
                     </div>
+                    <button id="contact-me" type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:w-auto sm:text-sm mt-4">Contact me</button>
                 </div>
             </div>
             <div class="flex-1 ">
@@ -116,6 +117,48 @@
         </div>
         <a href="https://github.com/ucudal/PW_2021_Website-bcattaneo"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1" width="149"
                 height="149"></a>
+
+        <!-- Contact modal -->
+        <div id="contact-modal" class="hidden fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+            <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+                <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+                <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                    <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                        <div class="sm:flex sm:items-start">
+                            <form id="modal-form">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="">
+                                        <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+                                        Name
+                                      </label>
+                                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="modal-name" type="text" placeholder="Username">
+                                    </div>
+                                    <div class="">
+                                        <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+                                        Email
+                                      </label>
+                                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="modal-email" type="email" placeholder="Name@domain.com">
+                                    </div>
+                                </div>
+                                <div class="mt-4 w-full">
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+                                    Message
+                                  </label>
+                                    <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="modal-message" type="text" placeholder="Tell me about it"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                        <button id="modal-submit" type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm">Submit</button>
+                        <button id="modal-cancel" type="button" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
 </body>
 
 </html>
