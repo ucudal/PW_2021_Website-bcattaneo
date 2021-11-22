@@ -5,13 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bruno Cattáneo</title>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css">
     <link href="./css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+    <div id="error-alert" class="hidden m-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+        <strong class="font-bold">Oops!</strong>
+        <span id="error-alert-message" class="block sm:inline">Ocurrió un error.</span>
+        <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+          <svg id="error-alert-close" class="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+        </span>
+    </div>
     <div class="text-center py-6 px-4 px-6 px-8 shadow mb-8">
-        <!-- TODO: is there a better way to achieve this? -->
         <div class="flex items-center justify-center ">
             <img class="w-32 h-32 mr-2 rounded-full" src="img/logo.png" alt="Profile image" />
         </div>
@@ -71,24 +76,7 @@
             <div class="flex-1 ">
                 <div>
                     <h4 class="uppercase font-bold text-1xl">👷 Experience</h4>
-                    <div class="text-gray-600 w-full mt-2 overflow-hidden">
-                        <p class="text-black font-bold">Teaching Assistant, Programming I</p>
-                        <p>Catholic University of Uruguay</p>
-                        <p class="italic">2020-Present</p>
-                        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet auctor nisl. Nullam ac libero sed justo feugiat rutrum.</p>
-                    </div>
-                    <div class="mt-4 text-gray-600 w-full mt-2 overflow-hidden">
-                        <p class="text-black font-bold">Senior Software Engineer</p>
-                        <p>Sabre Corporation</p>
-                        <p class="italic">2021-Present</p>
-                        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet auctor nisl. Nullam ac libero sed justo feugiat rutrum.</p>
-                    </div>
-                    <div class="mt-4 text-gray-600 w-full mt-2 overflow-hidden">
-                        <p class="text-black font-bold">Senior Software Engineer</p>
-                        <p>Oracle Corporation</p>
-                        <p class="italic">2020-2021</p>
-                        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet auctor nisl. Nullam ac libero sed justo feugiat rutrum.</p>
-                    </div>
+                    <div id="experience-items"></div>
                 </div>
                 <div class="mt-8">
                     <h4 class="uppercase font-bold text-1xl">🫂 References</h4>
@@ -115,8 +103,6 @@
                 </div>
             </div>
         </div>
-        <a href="https://github.com/ucudal/PW_2021_Website-bcattaneo"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1" width="149"
-                height="149"></a>
 
         <!-- Contact modal -->
         <div id="contact-modal" class="hidden fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
@@ -132,20 +118,20 @@
                                         <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
                                         Name
                                       </label>
-                                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="modal-name" type="text" placeholder="Username">
+                                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nombreContacto" type="text" placeholder="Username">
                                     </div>
                                     <div class="">
                                         <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
                                         Email
                                       </label>
-                                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="modal-email" type="email" placeholder="Name@domain.com">
+                                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="emailContacto" type="email" placeholder="Name@domain.com">
                                     </div>
                                 </div>
                                 <div class="mt-4 w-full">
                                     <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
                                     Message
                                   </label>
-                                    <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="modal-message" type="text" placeholder="Tell me about it"></textarea>
+                                    <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="mensajeContacto" type="text" placeholder="Tell me about it"></textarea>
                                 </div>
                             </form>
                         </div>
@@ -157,7 +143,6 @@
                 </div>
             </div>
         </div>
-
         <script src="js/script.js"></script>
 </body>
 
