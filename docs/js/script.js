@@ -5,6 +5,8 @@ var endpointFormulario = "/enviar-formulario";
 var modal;
 var errorAlert;
 var errorAlertMessage;
+var okAlert;
+var okAlertMessage;
 var handleErrors = function (response) {
     if (!response.ok) {
         throw Error(response.statusText);
@@ -19,7 +21,7 @@ var postContact = function (contact) {
         body: JSON.stringify(contact),
     })
         .then(handleErrors)
-        .then(function (response) { return console.log("OK"); })
+        .then(function (response) { return response.text().then(showOk); })
         .catch(function (error) {
         showError("Error al enviar formulario");
         console.error("Error:", error);
@@ -94,8 +96,15 @@ var showError = function (text) {
     errorAlertMessage.innerHTML = text;
     errorAlert.classList.remove("hidden");
 };
+var showOk = function (text) {
+    okAlertMessage.innerHTML = text;
+    okAlert.classList.remove("hidden");
+};
 var closeError = function () {
     errorAlert.classList.add("hidden");
+};
+var closeOk = function () {
+    okAlert.classList.add("hidden");
 };
 (function () {
     modal =
@@ -113,6 +122,16 @@ var closeError = function () {
             (function () {
                 throw "No error alert message";
             })();
+    okAlert =
+        document.querySelector("#ok-alert") ||
+            (function () {
+                throw "No error alert";
+            })();
+    okAlertMessage =
+        document.querySelector("#ok-alert-message") ||
+            (function () {
+                throw "No error alert message";
+            })();
     var modalSubmit = document.querySelector("#modal-submit");
     if (modalSubmit != null)
         modalSubmit.addEventListener("click", submitModal);
@@ -125,5 +144,8 @@ var closeError = function () {
     var errorAlertClose = document.querySelector("#error-alert-close");
     if (errorAlertClose != null)
         errorAlertClose.addEventListener("click", closeError);
+    var okAlertClose = document.querySelector("#ok-alert-close");
+    if (okAlertClose != null)
+        okAlertClose.addEventListener("click", closeOk);
     getWorkExperience();
 })();

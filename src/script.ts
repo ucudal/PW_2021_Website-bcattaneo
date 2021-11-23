@@ -5,6 +5,8 @@ const endpointFormulario = "/enviar-formulario";
 let modal: HTMLElement;
 let errorAlert: HTMLElement;
 let errorAlertMessage: HTMLElement;
+let okAlert: HTMLElement;
+let okAlertMessage: HTMLElement;
 
 var handleErrors = function (response: any) {
   if (!response.ok) {
@@ -21,7 +23,7 @@ var postContact = function (contact: any) {
     body: JSON.stringify(contact),
   })
     .then(handleErrors)
-    .then((response) => console.log("OK"))
+    .then((response) => response.text().then(showOk))
     .catch((error) => {
       showError("Error al enviar formulario");
       console.error("Error:", error);
@@ -107,8 +109,15 @@ var showError = function (text: string) {
   errorAlertMessage.innerHTML = text;
   errorAlert.classList.remove("hidden");
 };
+var showOk = function (text: string) {
+  okAlertMessage.innerHTML = text;
+  okAlert.classList.remove("hidden");
+};
 var closeError = function () {
   errorAlert.classList.add("hidden");
+};
+var closeOk = function () {
+  okAlert.classList.add("hidden");
 };
 (function () {
   modal =
@@ -129,6 +138,18 @@ var closeError = function () {
       throw "No error alert message";
     })();
 
+  okAlert =
+    document.querySelector("#ok-alert") ||
+    (function () {
+      throw "No error alert";
+    })();
+
+  okAlertMessage =
+    document.querySelector("#ok-alert-message") ||
+    (function () {
+      throw "No error alert message";
+    })();
+
   const modalSubmit = document.querySelector("#modal-submit");
   if (modalSubmit != null) modalSubmit.addEventListener("click", submitModal);
 
@@ -141,6 +162,9 @@ var closeError = function () {
   const errorAlertClose = document.querySelector("#error-alert-close");
   if (errorAlertClose != null)
     errorAlertClose.addEventListener("click", closeError);
+
+  const okAlertClose = document.querySelector("#ok-alert-close");
+  if (okAlertClose != null) okAlertClose.addEventListener("click", closeOk);
 
   getWorkExperience();
 })();
