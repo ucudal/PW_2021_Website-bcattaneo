@@ -54,8 +54,11 @@ var getWorkExperience = function () {
             first = false;
         }
         var experienceItemsElem = document.getElementById("experience-items");
+        var experienceItemsElem2 = document.getElementById("experience-items2");
         if (experienceItemsElem !== null)
             experienceItemsElem.innerHTML = experienceItems;
+        if (experienceItemsElem2 !== null)
+            experienceItemsElem2.innerHTML = experienceItems;
     })
         .catch(function (error) {
         showError("Error al obtener experiencias");
