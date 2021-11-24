@@ -1,4 +1,4 @@
-const apiBaseUrl = "https://PW2021-APINode-bcattaneo-5.bcattaneo.repl.co"; // CHANGEME
+const apiBaseUrl = "http://localhost:3000"; // CHANGEME
 const endpointExperiencia = "/experiencia-laboral";
 const endpointFormulario = "/enviar-formulario";
 
@@ -19,6 +19,7 @@ var postContact = function (contact: any) {
   fetch(`${apiBaseUrl}${endpointFormulario}`, {
     method: "POST",
     mode: "cors",
+    credentials: "include",
     headers: new Headers({ "content-type": "application/json" }),
     body: JSON.stringify(contact),
   })

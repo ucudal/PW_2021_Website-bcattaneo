@@ -1,5 +1,5 @@
 "use strict";
-var apiBaseUrl = "https://PW2021-APINode-bcattaneo-5.bcattaneo.repl.co"; // CHANGEME
+var apiBaseUrl = "http://localhost:3000"; // CHANGEME
 var endpointExperiencia = "/experiencia-laboral";
 var endpointFormulario = "/enviar-formulario";
 var modal;
@@ -17,6 +17,7 @@ var postContact = function (contact) {
     fetch("".concat(apiBaseUrl).concat(endpointFormulario), {
         method: "POST",
         mode: "cors",
+        credentials: "include",
         headers: new Headers({ "content-type": "application/json" }),
         body: JSON.stringify(contact),
     })
